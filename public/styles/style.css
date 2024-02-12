@@ -1,0 +1,495 @@
+body{
+    background-color: rgb(79, 79, 79);
+    margin:0;
+}
+.footer{
+    margin-top: 320px ;
+
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+    background: #333;
+    padding: 70px 0;
+    font: 15px/20px Arial, sans-serif;
+  }
+  
+  .container {
+    margin: 0 auto;
+    width: 250px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px;
+  }
+  
+  .carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  .carousel div {
+    transform-style: preserve-3d;
+    
+  }
+  
+  .item {
+    display: block;
+    position: absolute;
+    background: #5a5a5a;
+    width: 250px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 20px;
+    text-align: center;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #FFF;
+    opacity: 0.95;
+    border-radius: 10px;
+    transition: transform 1s;
+  }
+  
+  .a {
+    transform: rotateY(0deg) translateZ(250px);
+  }
+  .a .item {
+    background:  #5a5a5a;
+  }
+  .b {
+    transform: rotateY(60deg) translateZ(250px) rotateY(-60deg);
+  }
+  .b .item {
+    background:  #5a5a5a;
+  }
+  .c {
+    transform: rotateY(120deg) translateZ(250px)  rotateY(-120deg);
+  }
+  .c .item {
+    background:  #5a5a5a;
+  }
+  .d {
+    transform: rotateY(180deg) translateZ(250px) rotateY(-180deg);
+  }
+  .d .item {
+    background:  #5a5a5a;
+  }
+  .e {
+    transform: rotateY(240deg) translateZ(250px) rotateY(-240deg);
+  } 
+  .e .item {
+    background: #5a5a5a;
+  }
+  .f {
+    transform: rotateY(300deg) translateZ(250px) rotateY(-300deg);
+  }
+  .f .item {
+    background: #5a5a5a;
+  }
+  .k{
+    background-color: rgba(230, 230, 230, 0)
+  }
+  .next, .prev {
+    color:rgb(230, 230, 230);
+    position: absolute;
+    top: 100px;
+    padding: 1em 1em;
+    cursor: pointer;
+    background:#a0a0a0;
+    border-radius: 5px;
+    z-index: 1;
+    background-color: rgba(230, 230, 230, 0);
+    margin-left:10%;
+    margin-right:10%;
+
+  }
+  
+  .next:hover, .prev:hover { color: #000; }
+  .next:active, .prev:active {
+    top: 104px;
+    box-shadow: 0 1px 0 #999;
+  }
+  .next { right: 0; }
+  .prev { left: 0; }
+
+  .update-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(-45deg);
+    transition: transform 0.2s ease;
+  }
+  
+  .update-button:hover .arrow {
+    animation: spin 1s infinite linear;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .refresh-button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.refresh-icon {
+    width: 100%;
+    height: auto;
+}
+.refresh-icon {
+    margin-top: 5px;
+}
+
+.refresh-button:active .refresh-icon {
+    transform: rotate(720deg);
+}
+
+.update-button{
+    border: 1px solid black;
+    border-radius: 5px;
+    height:50px;
+    width:50px;
+    transition: background-color 0.4s;
+   
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.update-button:hover {
+    background-color:#474747; /* Колір при наведенні */
+  }
+  
+.update-button:active {
+  
+    background-color: #e7e7e7; /* Колір при натисканні */
+
+    box-shadow: 0 0 20px rgba(242, 242, 242, 0.9);
+}
+
+
+.mainHeader {
+    position:fixed;
+    top:0px;
+    background-color: #848484; /* Колір фону */
+    color: #fff; /* Колір тексту */
+    height: 50px;
+    width: 100%; /* Займає всю ширину */
+    display: flex; /* Використовуємо flexbox для вирівнювання */
+    justify-content:flex-start; /* Розташовуємо SVG і текст зліва і праворуч */
+    align-items: center; /* Вирівнюємо по вертикалі по центру */
+    
+}
+
+.headerSvg {
+    width: 30px; /* Розмір SVG */
+    height: 30px;
+    margin: 10px; /* Додамо відступ навколо SVG */
+}
+
+.h1Header {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 20px;
+    color: #000;
+    margin: 0;
+    margin-left: 5px;
+    margin-top: 3px; /* Видаляємо зовнішні відступи від тексту */
+}
+
+.bodyCarusel{
+    margin-top:100px;
+    
+}
+
+.dateTime{
+    text-shadow: 0 0 7px rgba(255, 255, 255, 2);
+    white-space: nowrap;
+    position:relative;
+    right:42px
+}
+
+.pnCont{
+    width:100%;
+    display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-top:-240px;
+}
+.crypto{
+    margin-top:-235px;
+}
+.descript{
+    margin-top: -185px;
+    color: #000;
+    font-size: 17px;
+}
+.diff{
+    margin-top: -172px;
+    color: #ffffff;
+    font-size: 10px;
+    margin-left:47px;
+}
+.axiosData{
+    position: relative;
+    top: 10px;
+}
+@media(max-width:1200px){
+    .next, .prev {
+        color:rgb(230, 230, 230);
+        position: absolute;
+        top: 100px;
+        padding: 1em 1em;
+        cursor: pointer;
+        background:#a0a0a0;
+        border-radius: 5px;
+        z-index: 1;
+        background-color: rgba(230, 230, 230, 0);
+        margin-left:10px;
+        margin-right:10px;
+        margin-top:125px;
+    
+      }
+      .pnCont {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        margin-top: -270px;
+    }
+  
+}
+
+@media(max-width:975px){
+    .next , .prev {
+        border: none;
+        border-radius: 5px;
+        height: 200px;
+        width: 280px;
+        transition: background-color 0.4s;
+        box-shadow:none;
+        margin-top:55px;
+        opacity: 0;
+    }
+    .item {
+        display: block;
+        position: absolute;
+        background:  #5a5a5a;
+        width: 225px;
+        height: 180px;
+        line-height: 180px;
+        font-size: 1em;
+        text-align: center;
+        color: #FFF;
+        opacity: 0.95;
+        border-radius: 10px;
+        transition: transform 1s;
+        margin-left:12.5px;
+      }
+      .crypto{
+        margin-top:-210px;
+    }
+    .descript {
+        margin-top: -167px;
+        color: #000;
+        font-size: 17px;
+    }
+    .diff {
+        margin-top: -158px;
+        color: #ffffff;
+        font-size: 10px;
+        margin-left: 33px;
+    }
+}
+@media(max-width:760px){
+    .next , .prev {
+        border: none;
+        border-radius: 5px;
+        height: 200px;
+        width: 280px;
+        transition: background-color 0.4s;
+        box-shadow:none;
+        margin-top:55px;
+        opacity: 0;
+    }
+    .item {
+        display: block;
+        position: absolute;
+        background: none;
+        width: 187.5px;
+        height: 150px;
+        line-height: 150px;
+        font-size: 1em;
+        text-align: center;
+        color: #FFF;
+        opacity: 0.95;
+        border-radius: 10px;
+        transition: transform 1s;
+        margin-left:31.25px;
+      }
+      .container {
+        margin: 0 auto;
+        width: 250px;
+        height: 200px;
+        position: relative;
+        perspective: 1000px;
+      }
+      .a {
+        transform: rotateY(0deg) translateZ(187.5px);
+      }
+  
+      .b {
+        transform: rotateY(60deg) translateZ(187.5px) rotateY(-60deg);
+      }
+
+      .c {
+        transform: rotateY(120deg) translateZ(187.5px)  rotateY(-120deg);
+      }
+  
+      .d {
+        transform: rotateY(180deg) translateZ(187.5px) rotateY(-180deg);
+      }
+ 
+      .e {
+        transform: rotateY(240deg) translateZ(187.5px) rotateY(-240deg);
+      } 
+ 
+      .f {
+        transform: rotateY(300deg) translateZ(187.5px) rotateY(-300deg);
+      }
+      .descript {
+        margin-top: -107px;
+        color: #000;
+        font-size: 9px;
+    }
+    .diff {
+        margin-top: -101px;
+        color: #ffffff;
+        font-size: 9px;
+        margin-left: 33px;
+    }
+   
+}
+
+
+@media(max-width:760px){
+    .next , .prev {
+        border: none;
+        border-radius: 5px;
+        height: 200px;
+        width: 180px;
+        transition: background-color 0.4s;
+        box-shadow:none;
+        margin-top:55px;
+        opacity: 0;
+    }
+    .next{
+        margin-right:70px
+    }
+    .prev{
+        margin-left: 70px;
+    }
+    .item {
+        display: block;
+        position: absolute;
+        background: none;
+        width: 150px;
+        height: 120px;
+        line-height: 120px;
+        font-size: 1em;
+        text-align: center;
+        color: #FFF;
+        opacity: 0.95;
+        border-radius: 10px;
+        transition: transform 1s;
+        margin-left:50px;
+      }
+      .container {
+        margin: 0 auto;
+        width: 250px;
+        height: 200px;
+        position: relative;
+        perspective: 1000px;
+      }
+      .a {
+        transform: rotateY(0deg) translateZ(150px);
+      }
+  
+      .b {
+        transform: rotateY(60deg) translateZ(150px) rotateY(-60deg);
+      }
+
+      .c {
+        transform: rotateY(120deg) translateZ(150px)  rotateY(-120deg);
+      }
+  
+      .d {
+        transform: rotateY(180deg) translateZ(150px) rotateY(-180deg);
+      }
+ 
+      .e {
+        transform: rotateY(240deg) translateZ(150px) rotateY(-240deg);
+      } 
+ 
+      .f {
+        transform: rotateY(300deg) translateZ(150px) rotateY(-300deg);
+      }
+      .crypto{
+        margin-top:-140px;
+    }
+    .cruptoSvg{
+        height:35px;
+        width:35px
+    }
+   
+}
+
+@media(max-width:620px){
+    .next{
+        margin-right:0px
+    }
+    .prev{
+        margin-left: 0px;
+    }
+    .descript {
+        margin-top: -108px;
+        color: #000;
+        font-size: 10px;
+    }
+}
+
+.dollar{
+    color:green;
+    position: relative;
+    top: 10px;
+}
+.higher{
+    color:green;
+}
+.lower{
+    color:red;
+}
